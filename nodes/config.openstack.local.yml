@@ -13,20 +13,20 @@ classes:
 - system.reclass.storage.system.openstack_single
 parameters:
   _param:
-    reclass_data_repository: "https://github.com/tcpcloud/workshop-salt-model.git"
+    reclass_data_repository: "https://github.com/vilashjagani/workshop-salt-model.git"
     reclass_data_revision: master
-    reclass_config_master: 10.10.10.200
-    single_address: 10.10.10.200
+    reclass_config_master: 172.16.10.100
+    single_address: 172.16.10.100
     salt_master_host: 127.0.0.1
     salt_master_base_environment: prd
     rabbitmq_monitor_password: password
-    sensu_message_queue_host: 10.10.10.200
-    collectd_backend_carbon_host: 10.10.10.200
+    sensu_message_queue_host: 172.16.10.100
+    collectd_backend_carbon_host: 172.16.10.100
     collectd_backend_carbon_port: 2013
   linux:
     system:
-      name: config
-      domain: openstack.local
+      name: cfg01
+      domain: workshop.cloudlab.cz
   salt:
     master:
       accept_policy: open_mode
